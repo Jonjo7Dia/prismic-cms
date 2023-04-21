@@ -1,0 +1,12 @@
+{
+  "_cts": {
+    "home_page": {}
+  },
+  "slices": {
+    "PuppyBlock": {
+      "default": {
+        "primary": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "puppy_year": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading1",
+            "content": {
+              "text": "Desert"
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "photo_1",
+            {
+              "origin": {
+                "id": "IE2Z11zKsso",
+                "url": "https://images.unsplash.com/photo-1548658166-136d9f6a7e76?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwyfHxwdXBwaWVzfGVufDB8fHx8MTY4MjA4MDg3Mg&ixlib=rb-4.0.3&q=85",
+                "width": 4000,
+                "height": 5000
+              },
+              "url": "https://images.unsplash.com/photo-1548658166-136d9f6a7e76?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwyfHxwdXBwaWVzfGVufDB8fHx8MTY4MjA4MDg3Mg&ixlib=rb-4.0.3&q=85",
+              "width": 4000,
+              "height": 5000,
+              "edit": {
+                "background": "transparent",
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                }
+              },
+              "credits": null,
+              "alt": null,
+              "__TYPE__": "ImageContent",
+              "thumbnails": {}
+            }
+          ],
+          [
+            "puppy_2",
+            {
+              "origin": {
+                "id": "T-0EW-SEbsE",
+                "url": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHw4fHxwdXBwaWVzfGVufDB8fHx8MTY4MjA4MDg3Mg&ixlib=rb-4.0.3&q=85",
+                "width": 5784,
+                "height": 3861
+              },
+              "url": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHw4fHxwdXBwaWVzfGVufDB8fHx8MTY4MjA4MDg3Mg&ixlib=rb-4.0.3&q=85",
+              "width": 5784,
+              "height": 3861,
+              "edit": {
+                "background": "transparent",
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                }
+              },
+              "credits": null,
+              "alt": null,
+              "__TYPE__": "ImageContent",
+              "thumbnails": {}
+            }
+          ],
+          [
+            "puppy_3",
+            {
+              "origin": {
+                "id": "nhHx-_zsesc",
+                "url": "https://images.unsplash.com/photo-1610112645245-36020fc0e128?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHw3fHxwdXBwaWVzfGVufDB8fHx8MTY4MjA4MDg3Mg&ixlib=rb-4.0.3&q=85",
+                "width": 4000,
+                "height": 6000
+              },
+              "url": "https://images.unsplash.com/photo-1610112645245-36020fc0e128?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHw3fHxwdXBwaWVzfGVufDB8fHx8MTY4MjA4MDg3Mg&ixlib=rb-4.0.3&q=85",
+              "width": 4000,
+              "height": 6000,
+              "edit": {
+                "background": "transparent",
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                }
+              },
+              "credits": null,
+              "alt": null,
+              "__TYPE__": "ImageContent",
+              "thumbnails": {}
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

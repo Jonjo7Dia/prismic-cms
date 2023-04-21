@@ -1,0 +1,53 @@
+{
+  "id": "puppy_block",
+  "type": "SharedSlice",
+  "name": "PuppyBlock",
+  "description": "PuppyBlock",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "PuppyBlock",
+      "primary": {
+        "puppy_year": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Puppy Year",
+            "placeholder": "This is where it all begins...",
+            "allowTargetBlank": true,
+            "single": "heading1,heading2"
+          }
+        }
+      },
+      "items": {
+        "photo_1": {
+          "type": "Image",
+          "config": {
+            "label": "Photo 1",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "puppy_2": {
+          "type": "Image",
+          "config": {
+            "label": "Puppy 2",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "puppy_3": {
+          "type": "Image",
+          "config": {
+            "label": "Puppy 3",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}
