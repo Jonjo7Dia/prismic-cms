@@ -1,47 +1,31 @@
 {
-  "id": "puppy_block",
+  "id": "puppies",
   "type": "SharedSlice",
-  "name": "PuppyBlock",
-  "description": "PuppyBlock",
+  "name": "Puppies",
+  "description": "Puppies",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "PuppyBlock",
+      "description": "Puppies",
       "primary": {
-        "puppy_year": {
+        "title": {
           "type": "StructuredText",
           "config": {
-            "label": "Puppy Year",
+            "label": "Title",
             "placeholder": "This is where it all begins...",
             "allowTargetBlank": true,
-            "single": "heading1,heading2"
+            "single": "heading3"
           }
         }
       },
       "items": {
-        "photo_1": {
+        "puppy_image": {
           "type": "Image",
           "config": {
-            "label": "Photo 1",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
-        "puppy_2": {
-          "type": "Image",
-          "config": {
-            "label": "Puppy 2",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
-        "puppy_3": {
-          "type": "Image",
-          "config": {
-            "label": "Puppy 3",
+            "label": "Puppy image",
             "constraint": {},
             "thumbnails": []
           }

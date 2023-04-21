@@ -1,9 +1,24 @@
 {
   "_cts": {
-    "home_page": {}
+    "page": {}
   },
   "slices": {
-    "PuppyBlock": {
+    "Banner": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Information": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Dog": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Puppies": {
       "default": {
         "primary": {}
       }

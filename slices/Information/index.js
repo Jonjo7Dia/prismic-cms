@@ -2,11 +2,11 @@ import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
 
 /**
- * @typedef {import("@prismicio/client").Content.PuppyBlockSlice} PuppyBlockSlice
- * @typedef {import("@prismicio/react").SliceComponentProps<PuppyBlockSlice>} PuppyBlockProps
- * @param { PuppyBlockProps }
+ * @typedef {import("@prismicio/client").Content.InformationSlice} InformationSlice
+ * @typedef {import("@prismicio/react").SliceComponentProps<InformationSlice>} InformationProps
+ * @param { InformationProps }
  */
-const PuppyBlock = ({ slice }) => (
+const Information = ({ slice }) => (
   <section>
     <span className="title">
       {
@@ -33,4 +33,4 @@ const PuppyBlock = ({ slice }) => (
   </section>
 )
 
-export default PuppyBlock
+export default Information
