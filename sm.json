@@ -1,0 +1,7 @@
+{
+  "apiEndpoint": "https://prismic-cms-jonjo7dia.prismic.io/api/v2",
+  "libraries": [
+    "@/slices"
+  ],
+  "_latest": "0.7.1"
+}
