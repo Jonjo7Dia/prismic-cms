@@ -22,6 +22,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "Hero": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

@@ -173,6 +173,65 @@ type DogSliceVariation = DogSliceDefault;
  */
 export type DogSlice = prismicT.SharedSlice<"dog", DogSliceVariation>;
 /**
+ * Primary content in Hero → Primary
+ *
+ */
+interface HeroSliceDefaultPrimary {
+    /**
+     * Title field in *Hero → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: hero.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Description field in *Hero → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: hero.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.TitleField;
+    /**
+     * Background field in *Hero → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero.primary.background
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    background: prismicT.ImageField<never>;
+}
+/**
+ * Default variation for Hero Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Hero`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeroSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<HeroSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *Hero*
+ *
+ */
+type HeroSliceVariation = HeroSliceDefault;
+/**
+ * Hero Shared Slice
+ *
+ * - **API ID**: `hero`
+ * - **Description**: `Hero`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeroSlice = prismicT.SharedSlice<"hero", HeroSliceVariation>;
+/**
  * Primary content in Information → Primary
  *
  */
@@ -302,6 +361,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, BannerSliceDefaultPrimary, BannerSliceDefault, BannerSliceVariation, BannerSlice, DogSliceDefaultPrimary, DogSliceDefaultItem, DogSliceDefault, DogSliceVariation, DogSlice, InformationSliceDefaultPrimary, InformationSliceDefault, InformationSliceVariation, InformationSlice, PuppiesSliceDefaultPrimary, PuppiesSliceDefaultItem, PuppiesSliceDefault, PuppiesSliceVariation, PuppiesSlice };
+        export type { PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, BannerSliceDefaultPrimary, BannerSliceDefault, BannerSliceVariation, BannerSlice, DogSliceDefaultPrimary, DogSliceDefaultItem, DogSliceDefault, DogSliceVariation, DogSlice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, InformationSliceDefaultPrimary, InformationSliceDefault, InformationSliceVariation, InformationSlice, PuppiesSliceDefaultPrimary, PuppiesSliceDefaultItem, PuppiesSliceDefault, PuppiesSliceVariation, PuppiesSlice };
     }
 }
