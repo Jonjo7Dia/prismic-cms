@@ -17,7 +17,8 @@
             "label": "Title",
             "placeholder": "This is where it all begins...",
             "allowTargetBlank": true,
-            "single": "heading1"
+            "single": "heading1",
+            "className": "hero-block__title"
           }
         },
         "description": {
