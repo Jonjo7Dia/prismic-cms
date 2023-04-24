@@ -4,7 +4,7 @@ import Image from "next/image";
 
 interface HeroProps {
   title: any;
-  description: string;
+  description: any;
   src: string;
   alt: string;
 }
@@ -23,6 +23,8 @@ export default function HeroBlock(props: HeroProps) {
       </div>
       <div className={classes["hero-block__content"]}>
         <PrismicRichText field={props.title} />
+        <div className={classes["hero-block__span"]}></div>
+        <PrismicRichText field={props.description} />
       </div>
     </div>
   );

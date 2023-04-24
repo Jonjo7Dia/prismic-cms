@@ -27,10 +27,58 @@
     width: 100%;
     z-index: 2;
     padding: rem(20px);
+    display: flex;
+    flex-direction: column;
+    gap: rem(20px);
+
     & > h1 {
       font-size: rem(40px);
       font-weight: 700;
       font-family: "Inter";
+      text-transform: uppercase;
+
+      @include breakpoint(sm) {
+        font-size: rem(70px);
+      }
     }
+
+    & > h3 {
+      font-size: rem(20px);
+      font-weight: 700;
+      font-family: "Inter";
+
+      @include breakpoint(sm) {
+        font-size: rem(32px);
+      }
+    }
+  }
+
+  &__span {
+    background-color: white;
+    height: rem(15px);
+    width: 0%;
+    animation: growWidth80 1s ease-in-out forwards;
+
+    @include breakpoint(sm) {
+      height: rem(25px);
+      animation: growWidth60 1s ease-in-out forwards;
+    }
+  }
+}
+@keyframes growWidth80 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes growWidth60 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 60%;
   }
 }
