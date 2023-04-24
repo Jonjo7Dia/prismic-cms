@@ -19,7 +19,7 @@ export default function HeroBlock(props: HeroProps) {
           className={classes["hero-block__background__image"]}
           width={1204}
           height={800}
-          priority
+          priority={true}
         />
       </div>
       <div className={classes["hero-block__content"]}>
