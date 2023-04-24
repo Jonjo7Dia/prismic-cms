@@ -6,6 +6,46 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
+/** Content for Nav Bar documents */
+interface NavBarDocumentData {
+    /**
+     * Name field in *Nav Bar*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: nav_bar.name
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    name: prismicT.KeyTextField;
+    /**
+     * Slice Zone field in *Nav Bar*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: nav_bar.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<NavBarDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Nav Bar → Slice Zone*
+ *
+ */
+type NavBarDocumentDataSlicesSlice = NavigationItemSlice;
+/**
+ * Nav Bar document from Prismic
+ *
+ * - **API ID**: `nav_bar`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type NavBarDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<NavBarDocumentData>, "nav_bar", Lang>;
 /** Content for Page documents */
 interface PageDocumentData {
     /**
@@ -46,7 +86,7 @@ type PageDocumentDataSlicesSlice = BannerSlice | DogSlice | InformationSlice | P
  * @typeParam Lang - Language API ID of the document.
  */
 export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
-export type AllDocumentTypes = PageDocument;
+export type AllDocumentTypes = NavBarDocument | PageDocument;
 /**
  * Primary content in Banner → Primary
  *
@@ -132,6 +172,16 @@ interface DogSliceDefaultPrimary {
      *
      */
     align_right: prismicT.BooleanField;
+    /**
+     * Block ID field in *Dog → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: dog.primary.block_id
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    block_id: prismicT.KeyTextField;
 }
 /**
  * Item in Dog → Items
@@ -207,6 +257,16 @@ interface HeroSliceDefaultPrimary {
      *
      */
     background: prismicT.ImageField<never>;
+    /**
+     * Next Block Id field in *Hero → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero.primary.next_block_id
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    next_block_id: prismicT.KeyTextField;
 }
 /**
  * Default variation for Hero Slice
@@ -277,6 +337,16 @@ interface InformationSliceDefaultPrimary {
      *
      */
     image_right: prismicT.BooleanField;
+    /**
+     * Block Id field in *Information → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: information.primary.block_id
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    block_id: prismicT.KeyTextField;
 }
 /**
  * Default variation for Information Slice
@@ -301,6 +371,105 @@ type InformationSliceVariation = InformationSliceDefault;
  *
  */
 export type InformationSlice = prismicT.SharedSlice<"information", InformationSliceVariation>;
+/**
+ * Primary content in NavBar → Primary
+ *
+ */
+interface NavBarSliceDefaultPrimary {
+    /**
+     * Website Title field in *NavBar → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: nav_bar.primary.website_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    website_title: prismicT.KeyTextField;
+}
+/**
+ * Default variation for NavBar Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `NavBar`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NavBarSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<NavBarSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *NavBar*
+ *
+ */
+type NavBarSliceVariation = NavBarSliceDefault;
+/**
+ * NavBar Shared Slice
+ *
+ * - **API ID**: `nav_bar`
+ * - **Description**: `NavBar`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NavBarSlice = prismicT.SharedSlice<"nav_bar", NavBarSliceVariation>;
+/**
+ * Primary content in NavigationItem → Primary
+ *
+ */
+interface NavigationItemSliceDefaultPrimary {
+    /**
+     * Name field in *NavigationItem → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation_item.primary.name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    name: prismicT.KeyTextField;
+    /**
+     * Link field in *NavigationItem → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation_item.primary.link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link: prismicT.LinkField;
+    /**
+     * Call to Action field in *NavigationItem → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: navigation_item.primary.call_to_action
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    call_to_action: prismicT.BooleanField;
+}
+/**
+ * Default variation for NavigationItem Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `NavigationItem`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NavigationItemSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<NavigationItemSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *NavigationItem*
+ *
+ */
+type NavigationItemSliceVariation = NavigationItemSliceDefault;
+/**
+ * NavigationItem Shared Slice
+ *
+ * - **API ID**: `navigation_item`
+ * - **Description**: `NavigationItem`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NavigationItemSlice = prismicT.SharedSlice<"navigation_item", NavigationItemSliceVariation>;
 /**
  * Primary content in Puppies → Primary
  *
@@ -361,6 +530,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, BannerSliceDefaultPrimary, BannerSliceDefault, BannerSliceVariation, BannerSlice, DogSliceDefaultPrimary, DogSliceDefaultItem, DogSliceDefault, DogSliceVariation, DogSlice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, InformationSliceDefaultPrimary, InformationSliceDefault, InformationSliceVariation, InformationSlice, PuppiesSliceDefaultPrimary, PuppiesSliceDefaultItem, PuppiesSliceDefault, PuppiesSliceVariation, PuppiesSlice };
+        export type { NavBarDocumentData, NavBarDocumentDataSlicesSlice, NavBarDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, BannerSliceDefaultPrimary, BannerSliceDefault, BannerSliceVariation, BannerSlice, DogSliceDefaultPrimary, DogSliceDefaultItem, DogSliceDefault, DogSliceVariation, DogSlice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, InformationSliceDefaultPrimary, InformationSliceDefault, InformationSliceVariation, InformationSlice, NavBarSliceDefaultPrimary, NavBarSliceDefault, NavBarSliceVariation, NavBarSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, PuppiesSliceDefaultPrimary, PuppiesSliceDefaultItem, PuppiesSliceDefault, PuppiesSliceVariation, PuppiesSlice };
     }
 }

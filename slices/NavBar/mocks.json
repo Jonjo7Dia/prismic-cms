@@ -1,0 +1,19 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "website_title": {
+        "__TYPE__": "FieldContent",
+        "value": "what",
+        "type": "Text"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

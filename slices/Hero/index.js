@@ -1,5 +1,4 @@
 import React from "react";
-import { PrismicRichText } from "@prismicio/react";
 import HeroBlock from "../../components/HeroBlock";
 /**
  * @typedef {import("@prismicio/client").Content.HeroSlice} HeroSlice
@@ -13,6 +12,7 @@ const Hero = ({ slice }) => (
     description={slice.primary.description}
     alt={slice.primary.background.alt}
     src={slice.primary.background.url}
+    link={slice.primary.next_block_id}
   />
 );
 

@@ -17,8 +17,7 @@
             "label": "Title",
             "placeholder": "This is where it all begins...",
             "allowTargetBlank": true,
-            "single": "heading1",
-            "className": "hero-block__title"
+            "single": "heading1"
           }
         },
         "description": {
@@ -36,6 +35,13 @@
             "label": "Background",
             "constraint": {},
             "thumbnails": []
+          }
+        },
+        "next_block_id": {
+          "type": "Text",
+          "config": {
+            "label": "Next Block Id",
+            "placeholder": ""
           }
         }
       },

@@ -51,6 +51,11 @@
         "alt": null,
         "__TYPE__": "ImageContent",
         "thumbnails": {}
+      },
+      "next_block_id": {
+        "__TYPE__": "FieldContent",
+        "value": "location",
+        "type": "Text"
       }
     },
     "items": [

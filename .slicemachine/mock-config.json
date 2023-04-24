@@ -1,6 +1,7 @@
 {
   "_cts": {
-    "page": {}
+    "page": {},
+    "nav_bar": {}
   },
   "slices": {
     "Banner": {
@@ -24,6 +25,17 @@
       }
     },
     "Hero": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "NavBar": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "NavigationItem": {
       "default": {
         "primary": {}
       }

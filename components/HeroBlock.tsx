@@ -2,12 +2,14 @@ import classes from "../styles/Hero.module.scss";
 import { PrismicRichText } from "@prismicio/react";
 import Image from "next/image";
 import { useState } from "react";
+import ScrollButton from "./ScrollButton";
 
 interface HeroProps {
   title: any;
   description: any;
   src: string;
   alt: string;
+  link: string | undefined;
 }
 
 export default function HeroBlock(props: HeroProps) {
@@ -35,6 +37,7 @@ export default function HeroBlock(props: HeroProps) {
           <PrismicRichText field={props.description} />
         </div>
       )}
+      {props.link != undefined && <ScrollButton link={props.link} />}
     </div>
   );
 }

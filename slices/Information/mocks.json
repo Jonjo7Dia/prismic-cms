@@ -51,6 +51,11 @@
       "image_right": {
         "__TYPE__": "BooleanContent",
         "value": true
+      },
+      "block_id": {
+        "__TYPE__": "FieldContent",
+        "value": "please",
+        "type": "Text"
       }
     },
     "items": [

@@ -45,6 +45,13 @@
             "placeholder_true": "true",
             "default_value": true
           }
+        },
+        "block_id": {
+          "type": "Text",
+          "config": {
+            "label": "Block Id",
+            "placeholder": ""
+          }
         }
       },
       "items": {},

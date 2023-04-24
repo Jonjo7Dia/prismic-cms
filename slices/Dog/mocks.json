@@ -28,6 +28,11 @@
       "align_right": {
         "__TYPE__": "BooleanContent",
         "value": false
+      },
+      "block_id": {
+        "__TYPE__": "FieldContent",
+        "value": "cream",
+        "type": "Text"
       }
     },
     "items": [

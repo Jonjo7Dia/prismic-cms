@@ -36,6 +36,13 @@
             "placeholder_true": "true",
             "placeholder_false": "false"
           }
+        },
+        "block_id": {
+          "type": "Text",
+          "config": {
+            "label": "Block ID",
+            "placeholder": ""
+          }
         }
       },
       "items": {
