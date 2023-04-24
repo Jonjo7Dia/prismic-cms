@@ -1,6 +1,7 @@
 import classes from "../styles/Hero.module.scss";
 import { PrismicRichText } from "@prismicio/react";
 import Image from "next/image";
+import { useState } from "react";
 
 interface HeroProps {
   title: any;
@@ -10,23 +11,30 @@ interface HeroProps {
 }
 
 export default function HeroBlock(props: HeroProps) {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
     <div className={classes["hero-block"]}>
       <div className={classes["hero-block__background"]}>
         <Image
           src={props.src}
           alt={props.alt}
+          fill
           className={classes["hero-block__background__image"]}
-          width={1204}
-          height={800}
+          object-fit={"cover"}
           priority={true}
+          onLoadingComplete={() => {
+            setImageLoaded(true);
+          }}
         />
       </div>
-      <div className={classes["hero-block__content"]}>
-        <PrismicRichText field={props.title} />
-        <div className={classes["hero-block__span"]}></div>
-        <PrismicRichText field={props.description} />
-      </div>
+      {imageLoaded && (
+        <div className={classes["hero-block__content"]}>
+          <PrismicRichText field={props.title} />
+          <div className={classes["hero-block__span"]}></div>
+          <PrismicRichText field={props.description} />
+        </div>
+      )}
     </div>
   );
 }
