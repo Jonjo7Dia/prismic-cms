@@ -29,12 +29,6 @@
         "primary": {}
       }
     },
-    "NavBar": {
-      "default": {
-        "primary": {},
-        "items": {}
-      }
-    },
     "NavigationItem": {
       "default": {
         "primary": {}

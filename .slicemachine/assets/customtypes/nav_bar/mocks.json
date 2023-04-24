@@ -1,18 +1,25 @@
 {
   "name": {
     "__TYPE__": "FieldContent",
-    "value": "means",
+    "value": "himself",
     "type": "Text"
   },
   "uid": {
     "__TYPE__": "UIDContent",
-    "value": "connected"
+    "value": "tune"
+  },
+  "main_link": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "__TYPE__": "ExternalLink",
+      "url": "http://twitter.com"
+    }
   },
   "slices": {
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "navigation_item$3bcab41a-417e-44b5-b9a8-f7a7c61aae63",
+        "key": "navigation_item$194a894d-c790-44a2-8071-2d6cd0bbbe05",
         "name": "navigation_item",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -20,14 +27,14 @@
           "primary": {
             "name": {
               "__TYPE__": "FieldContent",
-              "value": "remain",
+              "value": "wall",
               "type": "Text"
             },
             "link": {
               "__TYPE__": "LinkContent",
               "value": {
                 "__TYPE__": "ExternalLink",
-                "url": "http://twitter.com"
+                "url": "http://google.com"
               }
             },
             "call_to_action": {

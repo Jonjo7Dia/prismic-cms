@@ -1,6 +1,6 @@
 {
   "id": "nav_bar",
-  "label": "Nav Bar",
+  "label": "Navigation",
   "repeatable": true,
   "status": true,
   "json": {
@@ -17,6 +17,14 @@
         "config": {
           "label": "Uid",
           "placeholder": ""
+        }
+      },
+      "main_link": {
+        "type": "Link",
+        "config": {
+          "label": "Main Link",
+          "placeholder": "",
+          "select": null
         }
       },
       "slices": {

@@ -6,10 +6,10 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
-/** Content for Nav Bar documents */
+/** Content for Navigation documents */
 interface NavBarDocumentData {
     /**
-     * Name field in *Nav Bar*
+     * Name field in *Navigation*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
@@ -20,7 +20,18 @@ interface NavBarDocumentData {
      */
     name: prismicT.KeyTextField;
     /**
-     * Slice Zone field in *Nav Bar*
+     * Main Link field in *Navigation*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: nav_bar.main_link
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    main_link: prismicT.LinkField;
+    /**
+     * Slice Zone field in *Navigation*
      *
      * - **Field Type**: Slice Zone
      * - **Placeholder**: *None*
@@ -32,12 +43,12 @@ interface NavBarDocumentData {
     slices: prismicT.SliceZone<NavBarDocumentDataSlicesSlice>;
 }
 /**
- * Slice for *Nav Bar → Slice Zone*
+ * Slice for *Navigation → Slice Zone*
  *
  */
 type NavBarDocumentDataSlicesSlice = NavigationItemSlice;
 /**
- * Nav Bar document from Prismic
+ * Navigation document from Prismic
  *
  * - **API ID**: `nav_bar`
  * - **Repeatable**: `true`
@@ -372,45 +383,6 @@ type InformationSliceVariation = InformationSliceDefault;
  */
 export type InformationSlice = prismicT.SharedSlice<"information", InformationSliceVariation>;
 /**
- * Primary content in NavBar → Primary
- *
- */
-interface NavBarSliceDefaultPrimary {
-    /**
-     * Website Title field in *NavBar → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: nav_bar.primary.website_title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    website_title: prismicT.KeyTextField;
-}
-/**
- * Default variation for NavBar Slice
- *
- * - **API ID**: `default`
- * - **Description**: `NavBar`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type NavBarSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<NavBarSliceDefaultPrimary>, never>;
-/**
- * Slice variation for *NavBar*
- *
- */
-type NavBarSliceVariation = NavBarSliceDefault;
-/**
- * NavBar Shared Slice
- *
- * - **API ID**: `nav_bar`
- * - **Description**: `NavBar`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type NavBarSlice = prismicT.SharedSlice<"nav_bar", NavBarSliceVariation>;
-/**
  * Primary content in NavigationItem → Primary
  *
  */
@@ -530,6 +502,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { NavBarDocumentData, NavBarDocumentDataSlicesSlice, NavBarDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, BannerSliceDefaultPrimary, BannerSliceDefault, BannerSliceVariation, BannerSlice, DogSliceDefaultPrimary, DogSliceDefaultItem, DogSliceDefault, DogSliceVariation, DogSlice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, InformationSliceDefaultPrimary, InformationSliceDefault, InformationSliceVariation, InformationSlice, NavBarSliceDefaultPrimary, NavBarSliceDefault, NavBarSliceVariation, NavBarSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, PuppiesSliceDefaultPrimary, PuppiesSliceDefaultItem, PuppiesSliceDefault, PuppiesSliceVariation, PuppiesSlice };
+        export type { NavBarDocumentData, NavBarDocumentDataSlicesSlice, NavBarDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, BannerSliceDefaultPrimary, BannerSliceDefault, BannerSliceVariation, BannerSlice, DogSliceDefaultPrimary, DogSliceDefaultItem, DogSliceDefault, DogSliceVariation, DogSlice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, InformationSliceDefaultPrimary, InformationSliceDefault, InformationSliceVariation, InformationSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, PuppiesSliceDefaultPrimary, PuppiesSliceDefaultItem, PuppiesSliceDefault, PuppiesSliceVariation, PuppiesSlice };
     }
 }
