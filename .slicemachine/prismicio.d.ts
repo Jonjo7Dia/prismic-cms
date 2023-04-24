@@ -35,7 +35,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = BannerSlice | DogSlice | InformationSlice | PuppiesSlice;
+type PageDocumentDataSlicesSlice = BannerSlice | DogSlice | InformationSlice | PuppiesSlice | HeroSlice;
 /**
  * Page document from Prismic
  *
