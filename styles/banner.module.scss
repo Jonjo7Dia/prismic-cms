@@ -8,13 +8,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  margin-top: rem(100px);
   &__image {
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
+
+    @include breakpoint(md) {
+      object-fit: contain;
+    }
   }
   &__content {
     z-index: 2;
