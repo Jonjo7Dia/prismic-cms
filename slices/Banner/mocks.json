@@ -9,31 +9,40 @@
           {
             "type": "heading2",
             "content": {
-              "text": "Brush"
-            }
+              "text": "Our Dogs",
+              "spans": []
+            },
+            "direction": "ltr"
           }
         ]
       },
       "banner": {
-        "__TYPE__": "ImageContent",
         "origin": {
-          "id": "main",
-          "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
-          "width": 12288,
-          "height": 16384
+          "id": "W_5Eakb1598",
+          "url": "https://images.unsplash.com/photo-1618022325802-7e5e732d97a1?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwyfHxibGFja3xlbnwwfHx8fDE2ODI0NDE0MjM&ixlib=rb-4.0.3&q=85",
+          "width": 4204,
+          "height": 5452
         },
-        "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
-        "width": 12288,
-        "height": 16384,
+        "url": "https://images.unsplash.com/photo-1618022325802-7e5e732d97a1?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMzc0NjN8MHwxfHNlYXJjaHwyfHxibGFja3xlbnwwfHx8fDE2ODI0NDE0MjM&ixlib=rb-4.0.3&q=85",
+        "width": 4204,
+        "height": 5452,
         "edit": {
+          "background": "transparent",
           "zoom": 1,
           "crop": {
             "x": 0,
             "y": 0
-          },
-          "background": "transparent"
+          }
         },
+        "credits": null,
+        "alt": null,
+        "__TYPE__": "ImageContent",
         "thumbnails": {}
+      },
+      "id_link": {
+        "__TYPE__": "FieldContent",
+        "value": "leather",
+        "type": "Text"
       }
     },
     "items": [

@@ -123,6 +123,16 @@ interface BannerSliceDefaultPrimary {
      *
      */
     banner: prismicT.ImageField<never>;
+    /**
+     * Id Link field in *Banner → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: banner.primary.id_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    id_link: prismicT.KeyTextField;
 }
 /**
  * Default variation for Banner Slice

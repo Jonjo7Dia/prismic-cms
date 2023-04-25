@@ -27,6 +27,13 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "id_link": {
+          "type": "Text",
+          "config": {
+            "label": "Id Link",
+            "placeholder": ""
+          }
         }
       },
       "items": {},
