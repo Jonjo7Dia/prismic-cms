@@ -46,7 +46,6 @@ center,
 dl,
 dt,
 dd,
-ol,
 ul,
 li,
 fieldset,
@@ -105,7 +104,7 @@ section {
 body {
   line-height: 1;
 }
-ol,
+
 ul {
   list-style: none;
 }
@@ -143,3 +142,52 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
+
+.slice-container {
+  padding-right: rem(10px);
+  padding-left: rem(10px);
+  margin-top: rem(100px);
+
+  @include breakpoint(md) {
+    padding-right: rem(20px);
+    padding-left: rem(20px);
+  }
+}
+h3 {
+  font-size: rem(20px);
+  font-weight: 700;
+  font-family: "Inter";
+
+  @include breakpoint(sm) {
+    font-size: rem(32px);
+  }
+}
+ol,
+ul {
+  width: 100%;
+  padding-left: rem(20px);
+  padding-right: rem(20px);
+}
+
+li {
+  margin-bottom: rem(8px);
+  line-height: 125%;
+  text-align: justify;
+  font-size: rem(16px);
+
+  @include breakpoint(md) {
+    font-size: rem(20px);
+  }
+}
+
+// ol,
+// ul {
+//   list-style-position: inside;
+// }
+
+// ol,
+// ul:after {
+//   content: "";
+//   width: 100%;
+//   display: inline-block;
+// }

@@ -9,8 +9,10 @@
           {
             "type": "heading3",
             "content": {
-              "text": "Shoulder"
-            }
+              "text": "Why Labradors",
+              "spans": []
+            },
+            "direction": "ltr"
           }
         ]
       },
@@ -18,10 +20,36 @@
         "__TYPE__": "StructuredTextContent",
         "value": [
           {
-            "type": "paragraph",
+            "type": "o-list-item",
             "content": {
-              "text": "Reprehenderit duis quis consequat aute non."
-            }
+              "text": "Intelligence: Labradors are highly intelligent and are often used as service dogs because of their ability to learn and follow commands. This makes them easy to train and a great fit for a variety of roles.",
+              "spans": []
+            },
+            "direction": "ltr"
+          },
+          {
+            "type": "o-list-item",
+            "content": {
+              "text": "Loyalty: Labradors are known for their loyalty and affectionate nature. They are social animals that love being around people, making them great companions.",
+              "spans": []
+            },
+            "direction": "ltr"
+          },
+          {
+            "type": "o-list-item",
+            "content": {
+              "text": "Affectionate: Labradors are known for their affectionate nature and love being around people. They make great companions and are often referred to as \"man's best friend.\"",
+              "spans": []
+            },
+            "direction": "ltr"
+          },
+          {
+            "type": "o-list-item",
+            "content": {
+              "text": "Ease of care: Labradors have a short, dense coat that is easy to maintain and they shed minimally, making them a good choice for those with allergies.",
+              "spans": []
+            },
+            "direction": "ltr"
           }
         ]
       },

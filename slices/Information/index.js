@@ -1,36 +1,20 @@
-import React from 'react'
-import { PrismicRichText } from '@prismicio/react'
-
+import React from "react";
+import { PrismicRichText } from "@prismicio/react";
+import InformationBlock from "../../components/InformationBlock";
 /**
  * @typedef {import("@prismicio/client").Content.InformationSlice} InformationSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<InformationSlice>} InformationProps
  * @param { InformationProps }
  */
 const Information = ({ slice }) => (
-  <section>
-    <span className="title">
-      {
-        slice.primary.title ?
-        <PrismicRichText field={slice.primary.title}/>
-        : <h2>Template slice, update me!</h2>
-      }
-    </span>
-    {
-      slice.primary.description ?
-      <PrismicRichText field={slice.primary.description}/>
-      : <p>start by editing this slice from inside Slice Machine!</p>
-    }
-    <style jsx>{`
-        section {
-          max-width: 600px;
-          margin: 4em auto;
-          text-align: center;
-        }
-        .title {
-          color: #8592e0;
-        }
-    `}</style>
-  </section>
-)
+  <InformationBlock
+    id={slice.primary.block_id}
+    alignRight={slice.primary.image_right}
+    image={slice.primary.image}
+    title={slice.primary.title}
+    description={slice.primary.description}
+    right={slice.primary.image_right}
+  />
+);
 
-export default Information
+export default Information;
