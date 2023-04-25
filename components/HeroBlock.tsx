@@ -1,4 +1,4 @@
-import classes from "../styles/hero.module.scss";
+import classes from "../styles/heroBlock.module.scss";
 import { PrismicRichText } from "@prismicio/react";
 import Image from "next/image";
 import { useState } from "react";
