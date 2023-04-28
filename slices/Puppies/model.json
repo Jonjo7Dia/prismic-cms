@@ -19,6 +19,13 @@
             "allowTargetBlank": true,
             "single": "heading3"
           }
+        },
+        "block_id": {
+          "type": "Text",
+          "config": {
+            "label": "Block Id",
+            "placeholder": ""
+          }
         }
       },
       "items": {

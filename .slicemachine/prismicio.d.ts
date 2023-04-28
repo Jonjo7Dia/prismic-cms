@@ -467,6 +467,16 @@ interface PuppiesSliceDefaultPrimary {
      *
      */
     title: prismicT.TitleField;
+    /**
+     * Block Id field in *Puppies → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: puppies.primary.block_id
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    block_id: prismicT.KeyTextField;
 }
 /**
  * Item in Puppies → Items

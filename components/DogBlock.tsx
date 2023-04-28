@@ -2,16 +2,17 @@ import classes from "../styles/dogBlock.module.scss";
 import { PrismicRichText } from "@prismicio/react";
 import Image from "next/image";
 
-interface DogProps {
-  title: any;
-  description: any;
-  images: any;
-  alignRight: boolean;
-  blockId: string | undefined;
-}
 interface image {
   dog_photo: { url: string; alt: string };
 }
+interface DogProps {
+  title: any;
+  description: any;
+  images: image[];
+  alignRight: boolean;
+  blockId: string | undefined;
+}
+
 export default function DogBlock({
   title,
   description,
