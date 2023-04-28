@@ -43,8 +43,8 @@ export default function InformationBlock({
           <Image
             src={image.url}
             alt={image.alt}
-            width={1080}
-            height={873}
+            width={540}
+            height={436}
             className={classes["info-block__img"]}
           />
         </div>
