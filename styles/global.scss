@@ -145,8 +145,8 @@ body {
 }
 
 .slice-container {
-  padding-right: rem(10px);
-  padding-left: rem(10px);
+  padding-right: rem(42px);
+  padding-left: rem(42px);
   margin-top: rem(100px);
 
   @include breakpoint(md) {

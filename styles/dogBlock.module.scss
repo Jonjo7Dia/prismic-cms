@@ -1,0 +1,83 @@
+@import "./variables.scss";
+
+.dog-block {
+  padding-top: rem(60px);
+  display: flex;
+  flex-direction: column;
+
+  &--marginLess {
+    padding-top: 0;
+
+    @include breakpoint(md) {
+      margin-top: 0;
+    }
+  }
+
+  @include breakpoint(md) {
+    flex-direction: row;
+
+    &--right {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__images {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: rem(20px);
+    justify-content: space-evenly;
+
+    @include breakpoint(md) {
+      width: 50%;
+    }
+
+    &__dog-image {
+      width: rem(175px);
+      height: rem(250px);
+      object-fit: cover;
+
+      @include breakpoint(md) {
+        width: rem(250px);
+        height: rem(350px);
+      }
+    }
+  }
+
+  &__content {
+    @include breakpoint(md) {
+      width: 50%;
+      height: auto;
+      padding-top: rem(150px);
+      padding-left: rem(40px);
+    }
+
+    &--right {
+      @include breakpoint(md) {
+        padding-left: rem(0px);
+        padding-right: rem(40px);
+      }
+    }
+    & > h3 {
+      font-size: rem(26px);
+      font-weight: 700;
+      margin-top: rem(20px);
+      margin-bottom: rem(10px);
+      width: 100%;
+      @include breakpoint(md) {
+        font-size: rem(48px);
+      }
+    }
+
+    & > p {
+      text-align: justify;
+      font-size: rem(16px);
+      line-height: rem(29px);
+
+      @include breakpoint(md) {
+        font-size: rem(20px);
+      }
+    }
+  }
+}
