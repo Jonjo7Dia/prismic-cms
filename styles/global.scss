@@ -145,24 +145,30 @@ body {
 }
 
 .slice-container {
-  padding-right: rem(42px);
-  padding-left: rem(42px);
+  padding-right: rem(10px);
+  padding-left: rem(10px);
   margin-top: rem(100px);
   max-width: rem(1400px);
   margin-left: auto;
   margin-right: auto;
+  @include breakpoint(sm) {
+    padding-right: rem(42px);
+    padding-left: rem(42px);
+  }
   @include breakpoint(md) {
     padding-right: rem(120px);
     padding-left: rem(120px);
   }
 }
 h3 {
-  font-size: rem(20px);
+  font-size: rem(26px);
   font-weight: 700;
   font-family: "Inter";
+  margin-bottom: rem(16px);
 
   @include breakpoint(sm) {
     font-size: rem(32px);
+    margin-bottom: rem(32px);
   }
 }
 ol,
@@ -198,3 +204,12 @@ li {
 //   width: 100%;
 //   display: inline-block;
 // }
+p {
+  text-align: justify;
+  font-size: rem(16px);
+  line-height: rem(29px);
+
+  @include breakpoint(md) {
+    font-size: rem(20px);
+  }
+}

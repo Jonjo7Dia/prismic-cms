@@ -34,9 +34,10 @@
   &__content {
     & > h3 {
       width: 100%;
-
+      text-align: center;
       @include breakpoint(md) {
         font-size: rem(48px);
+        text-align: left;
       }
     }
 
@@ -55,10 +56,7 @@
   }
   &__text {
     height: 100%;
-    & > * {
-      font-family: sans-serif;
-      text-align: left;
-    }
+    margin-bottom: rem(16px);
   }
 
   &__image {
