@@ -22,7 +22,6 @@ export default function DogBlock({
   const alignImagesRight = alignRight ? classes["dog-block--right"] : "";
   const removeMarginTop =
     blockId !== null && blockId !== "" ? "" : classes["dog-block--marginLess"];
-  console.log(title, blockId);
   return (
     <section
       className={`slice-container ${classes["dog-block"]} ${alignImagesRight} ${removeMarginTop}`}
