@@ -86,7 +86,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = BannerSlice | DogSlice | InformationSlice | PuppiesSlice | HeroSlice;
+type PageDocumentDataSlicesSlice = BannerSlice | DogSlice | InformationSlice | PuppiesSlice | HeroSlice | ContactSlice;
 /**
  * Page document from Prismic
  *
@@ -157,6 +157,85 @@ type BannerSliceVariation = BannerSliceDefault;
  *
  */
 export type BannerSlice = prismicT.SharedSlice<"banner", BannerSliceVariation>;
+/**
+ * Primary content in Contact → Primary
+ *
+ */
+interface ContactSliceDefaultPrimary {
+    /**
+     * Title field in *Contact → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: contact.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Address field in *Contact → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact.primary.address
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    address: prismicT.KeyTextField;
+    /**
+     * Phone number field in *Contact → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact.primary.phone_number
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    phone_number: prismicT.KeyTextField;
+    /**
+     * Image field in *Contact → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact.primary.image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * Block ID field in *Contact → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact.primary.block_id
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    block_id: prismicT.KeyTextField;
+}
+/**
+ * Default variation for Contact Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Contact`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ContactSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<ContactSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *Contact*
+ *
+ */
+type ContactSliceVariation = ContactSliceDefault;
+/**
+ * Contact Shared Slice
+ *
+ * - **API ID**: `contact`
+ * - **Description**: `Contact`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ContactSlice = prismicT.SharedSlice<"contact", ContactSliceVariation>;
 /**
  * Primary content in Dog → Primary
  *
@@ -522,6 +601,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { NavBarDocumentData, NavBarDocumentDataSlicesSlice, NavBarDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, BannerSliceDefaultPrimary, BannerSliceDefault, BannerSliceVariation, BannerSlice, DogSliceDefaultPrimary, DogSliceDefaultItem, DogSliceDefault, DogSliceVariation, DogSlice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, InformationSliceDefaultPrimary, InformationSliceDefault, InformationSliceVariation, InformationSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, PuppiesSliceDefaultPrimary, PuppiesSliceDefaultItem, PuppiesSliceDefault, PuppiesSliceVariation, PuppiesSlice };
+        export type { NavBarDocumentData, NavBarDocumentDataSlicesSlice, NavBarDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, BannerSliceDefaultPrimary, BannerSliceDefault, BannerSliceVariation, BannerSlice, ContactSliceDefaultPrimary, ContactSliceDefault, ContactSliceVariation, ContactSlice, DogSliceDefaultPrimary, DogSliceDefaultItem, DogSliceDefault, DogSliceVariation, DogSlice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, InformationSliceDefaultPrimary, InformationSliceDefault, InformationSliceVariation, InformationSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, PuppiesSliceDefaultPrimary, PuppiesSliceDefaultItem, PuppiesSliceDefault, PuppiesSliceVariation, PuppiesSlice };
     }
 }

@@ -1,0 +1,63 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading2",
+            "content": {
+              "text": "Giving"
+            }
+          }
+        ]
+      },
+      "address": {
+        "__TYPE__": "FieldContent",
+        "value": "ants",
+        "type": "Text"
+      },
+      "phone_number": {
+        "__TYPE__": "FieldContent",
+        "value": "forward",
+        "type": "Text"
+      },
+      "image": {
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
+          "width": 4000,
+          "height": 6000
+        },
+        "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
+        "width": 4000,
+        "height": 6000,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "credits": null,
+        "alt": null,
+        "__TYPE__": "ImageContent",
+        "thumbnails": {}
+      },
+      "block_id": {
+        "__TYPE__": "FieldContent",
+        "value": "typical",
+        "type": "Text"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]
