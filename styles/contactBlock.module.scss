@@ -52,8 +52,13 @@
     font-weight: 700;
     text-decoration: none;
     color: $color-white;
+    transition: color ease 0.2s;
     @include breakpoint(md) {
       font-size: rem(32px);
+    }
+
+    &:hover {
+      color: $color-blue;
     }
   }
 

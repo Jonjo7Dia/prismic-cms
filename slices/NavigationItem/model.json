@@ -18,14 +18,6 @@
             "placeholder": ""
           }
         },
-        "link": {
-          "type": "Link",
-          "config": {
-            "label": "Link",
-            "placeholder": "",
-            "select": null
-          }
-        },
         "call_to_action": {
           "type": "Boolean",
           "config": {
@@ -33,6 +25,13 @@
             "placeholder_false": "false",
             "placeholder_true": "true",
             "default_value": false
+          }
+        },
+        "link": {
+          "type": "Text",
+          "config": {
+            "label": "Link",
+            "placeholder": ""
           }
         }
       },

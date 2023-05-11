@@ -487,16 +487,6 @@ interface NavigationItemSliceDefaultPrimary {
      */
     name: prismicT.KeyTextField;
     /**
-     * Link field in *NavigationItem → Primary*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: navigation_item.primary.link
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    link: prismicT.LinkField;
-    /**
      * Call to Action field in *NavigationItem → Primary*
      *
      * - **Field Type**: Boolean
@@ -507,6 +497,16 @@ interface NavigationItemSliceDefaultPrimary {
      *
      */
     call_to_action: prismicT.BooleanField;
+    /**
+     * Link field in *NavigationItem → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation_item.primary.link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    link: prismicT.KeyTextField;
 }
 /**
  * Default variation for NavigationItem Slice

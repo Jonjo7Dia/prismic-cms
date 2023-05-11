@@ -5,10 +5,11 @@ import Link from "next/link";
 
 export function Navigation({ navigation }: any) {
   const logo = navigation.data;
+  console.log(navigation.data.slices);
   const navLinks = navigation.data.slices.map((slice: any) => (
     <Link
       key={slice.id}
-      href={slice.primary.link.url === undefined ? "/" : slice.primary.link.url}
+      href={slice.primary.link === null ? "/" : slice.primary.link}
       className={`${classes["navBar__menu-item"]} ${
         slice.primary.call_to_action ? classes[`navBar__menu-item--button`] : ""
       }`}

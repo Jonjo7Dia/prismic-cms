@@ -9,11 +9,9 @@
         "type": "Text"
       },
       "link": {
-        "__TYPE__": "LinkContent",
-        "value": {
-          "__TYPE__": "ExternalLink",
-          "url": "https://prismic.io"
-        }
+        "__TYPE__": "FieldContent",
+        "value": "practice",
+        "type": "Text"
       },
       "call_to_action": {
         "__TYPE__": "BooleanContent",
