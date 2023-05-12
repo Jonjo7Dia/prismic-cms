@@ -1,0 +1,16 @@
+@import "./variables";
+
+.blog-page {
+  min-height: 100vh;
+  width: 100%;
+  background-image: radial-gradient(
+      circle farthest-corner at 20% 100%,
+      $color-blue,
+      transparent 52%
+    ),
+    radial-gradient(
+      circle farthest-corner at 80% 20%,
+      $color-pink,
+      transparent 33%
+    );
+}

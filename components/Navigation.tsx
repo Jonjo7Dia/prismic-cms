@@ -6,7 +6,6 @@ import Link from "next/link";
 
 export function Navigation({ navigation, children }: any) {
   const logo = navigation.data;
-  console.log(navigation.data.slices);
   const navLinks = navigation.data.slices.map((slice: any) => (
     <Link
       key={slice.id}
