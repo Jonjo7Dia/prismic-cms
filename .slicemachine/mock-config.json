@@ -1,7 +1,9 @@
 {
   "_cts": {
     "page": {},
-    "nav_bar": {}
+    "nav_bar": {},
+    "article": {},
+    "author": {}
   },
   "slices": {
     "Banner": {

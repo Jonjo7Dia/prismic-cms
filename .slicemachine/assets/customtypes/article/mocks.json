@@ -1,0 +1,66 @@
+{
+  "blog_image": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+      "width": 3168,
+      "height": 4752
+    },
+    "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+    "width": 3168,
+    "height": 4752,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
+  "blog_body": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Sunt ipsum esse duis dolore reprehenderit et et Lorem reprehenderit. Aute veniam velit adipisicing ullamco sint est enim tempor excepteur pariatur id. Non eiusmod magna nulla nulla officia labore cupidatat excepteur."
+        }
+      }
+    ]
+  },
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "map"
+  },
+  "blog_title": {
+    "__TYPE__": "FieldContent",
+    "value": "tightly",
+    "type": "Text"
+  },
+  "author": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "__TYPE__": "DocumentLink",
+      "id": "mock_document_id"
+    }
+  },
+  "publish_date": {
+    "__TYPE__": "FieldContent",
+    "type": "Date",
+    "value": "2021-10-11"
+  },
+  "description": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Occaecat anim sit ullamco incididunt nostrud ullamco minim ea officia nisi occaecat dolor ipsum. Incididunt esse anim quis velit cupidatat dolor laboris proident laborum esse anim velit sint enim. Pariatur quis mollit dolor aliquip Lorem cupidatat deserunt."
+        }
+      }
+    ]
+  }
+}

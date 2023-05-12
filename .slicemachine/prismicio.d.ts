@@ -6,6 +6,131 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
+/** Content for Article documents */
+interface ArticleDocumentData {
+    /**
+     * Blog Image field in *Article*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: article.blog_image
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    blog_image: prismicT.ImageField<never>;
+    /**
+     * Blog Body field in *Article*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: article.blog_body
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    blog_body: prismicT.RichTextField;
+    /**
+     * Blog Title field in *Article*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: article.blog_title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    blog_title: prismicT.KeyTextField;
+    /**
+     * Author  field in *Article*
+     *
+     * - **Field Type**: Content Relationship
+     * - **Placeholder**: *None*
+     * - **API ID Path**: article.author
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    author: prismicT.RelationField<"author">;
+    /**
+     * Publish Date field in *Article*
+     *
+     * - **Field Type**: Date
+     * - **Placeholder**: *None*
+     * - **API ID Path**: article.publish_date
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/date
+     *
+     */
+    publish_date: prismicT.DateField;
+    /**
+     * Description field in *Article*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: article.description
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+}
+/**
+ * Article document from Prismic
+ *
+ * - **API ID**: `article`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ArticleDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<ArticleDocumentData>, "article", Lang>;
+/** Content for Author documents */
+interface AuthorDocumentData {
+    /**
+     * Image field in *Author*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: author.image
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * Name field in *Author*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: author.name
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    name: prismicT.KeyTextField;
+    /**
+     * Author Description field in *Author*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: author.author_description
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    author_description: prismicT.RichTextField;
+}
+/**
+ * Author document from Prismic
+ *
+ * - **API ID**: `author`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type AuthorDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<AuthorDocumentData>, "author", Lang>;
 /** Content for Navigation documents */
 interface NavBarDocumentData {
     /**
@@ -97,7 +222,7 @@ type PageDocumentDataSlicesSlice = BannerSlice | DogSlice | InformationSlice | P
  * @typeParam Lang - Language API ID of the document.
  */
 export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
-export type AllDocumentTypes = NavBarDocument | PageDocument;
+export type AllDocumentTypes = ArticleDocument | AuthorDocument | NavBarDocument | PageDocument;
 /**
  * Primary content in Banner → Primary
  *
@@ -601,6 +726,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { NavBarDocumentData, NavBarDocumentDataSlicesSlice, NavBarDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, BannerSliceDefaultPrimary, BannerSliceDefault, BannerSliceVariation, BannerSlice, ContactSliceDefaultPrimary, ContactSliceDefault, ContactSliceVariation, ContactSlice, DogSliceDefaultPrimary, DogSliceDefaultItem, DogSliceDefault, DogSliceVariation, DogSlice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, InformationSliceDefaultPrimary, InformationSliceDefault, InformationSliceVariation, InformationSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, PuppiesSliceDefaultPrimary, PuppiesSliceDefaultItem, PuppiesSliceDefault, PuppiesSliceVariation, PuppiesSlice };
+        export type { ArticleDocumentData, ArticleDocument, AuthorDocumentData, AuthorDocument, NavBarDocumentData, NavBarDocumentDataSlicesSlice, NavBarDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, BannerSliceDefaultPrimary, BannerSliceDefault, BannerSliceVariation, BannerSlice, ContactSliceDefaultPrimary, ContactSliceDefault, ContactSliceVariation, ContactSlice, DogSliceDefaultPrimary, DogSliceDefaultItem, DogSliceDefault, DogSliceVariation, DogSlice, HeroSliceDefaultPrimary, HeroSliceDefault, HeroSliceVariation, HeroSlice, InformationSliceDefaultPrimary, InformationSliceDefault, InformationSliceVariation, InformationSlice, NavigationItemSliceDefaultPrimary, NavigationItemSliceDefault, NavigationItemSliceVariation, NavigationItemSlice, PuppiesSliceDefaultPrimary, PuppiesSliceDefaultItem, PuppiesSliceDefault, PuppiesSliceVariation, PuppiesSlice };
     }
 }
