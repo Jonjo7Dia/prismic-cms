@@ -8,7 +8,7 @@ export default function Page({ nav_bar, page }: any) {
   const children = (
     <SliceZone slices={page.data.slices} components={components} />
   );
-  return <Navigation navigation={nav_bar} children={children} />;
+  return <Navigation navigation={nav_bar}>{children}</Navigation>;
 }
 
 export async function getServerSideProps() {

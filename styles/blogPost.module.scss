@@ -1,0 +1,55 @@
+@import "./variables.scss";
+
+.blog-post {
+  &__image-wrapper {
+    width: 100%;
+    height: rem(300px);
+
+    @include breakpoint(xs) {
+      height: rem(400px);
+    }
+    @include breakpoint(sm) {
+      height: rem(500px);
+    }
+  }
+
+  &__hero-image {
+    object-fit: cover;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  &__title {
+    margin-top: rem(25px);
+    font-size: rem(25px);
+    font-weight: 700;
+
+    @include breakpoint(sm) {
+      font-size: rem(48px);
+    }
+  }
+
+  &__date {
+    margin-top: rem(20px);
+    font-size: rem(20px);
+  }
+
+  &__body {
+    margin-top: rem(20px);
+
+    & > * {
+      text-align: unset;
+      font-size: rem(20px);
+      font-family: "Mulish";
+      line-height: rem(30px);
+    }
+
+    & ul,
+    ol > li {
+      font-size: rem(20px);
+      text-align: unset;
+      font-weight: 400;
+      line-height: rem(30px);
+    }
+  }
+}

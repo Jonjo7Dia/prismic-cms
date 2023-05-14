@@ -1,7 +1,6 @@
 import classes from "styles/blogPage.module.scss";
 import BlogLink from "./blogComponents/BlogLink";
 export default function BlogPage({ articles }: any) {
-  console.log(articles);
   return (
     <div className={classes["blog-page"]}>
       {articles.map((article: any) => {

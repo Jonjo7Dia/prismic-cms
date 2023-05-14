@@ -8,7 +8,7 @@ export default function Page({ nav_bar, pages }: any) {
   const children = pages !== undefined && <BlogPage articles={pages} />;
   return (
     <>
-      <Navigation navigation={nav_bar} children={children} />
+      <Navigation navigation={nav_bar}> {children}</Navigation>
     </>
   );
 }
